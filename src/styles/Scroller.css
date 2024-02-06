@@ -1,0 +1,72 @@
+.scroll-container {
+  font-size: 18px;
+  font-family: "Times Modern", serif;
+  padding-block-end: 50vh;
+}
+
+.sticky-container {
+  position: sticky;
+  height: 100svh;
+  top: 0;
+  background-size: cover;
+  background-blend-mode: multiply;
+}
+
+.step-container:first-of-type {
+  margin-block-start: 0svh;
+}
+
+.step-container {
+  margin: 80svh 0;
+  position: relative;
+
+  width: 30svw;
+  min-height: fit-content;
+
+  padding: 1em;
+}
+
+.right {
+  left: 65%;
+  margin-inline-end: 2em;
+}
+
+.left {
+  left: 10%;
+}
+
+.step-heading {
+  color: #ff7676;
+}
+
+.progress-bar {
+  position: absolute;
+  top: 55px;
+  left: 2em;
+  height: 80svh;
+
+  display: flex;
+  flex-direction: column;
+}
+
+.step {
+  height: 5px;
+  width: 11px;
+
+  margin: 0.15em;
+}
+
+#step-halftime {
+  width: max-content;
+  font-size: 0.8rem;
+  font-family: "Roboto", sans-serif;
+}
+
+.active {
+  background-color: #ff7676;
+}
+
+.inactive {
+  background-color: #ffffff;
+  opacity: 15%;
+}

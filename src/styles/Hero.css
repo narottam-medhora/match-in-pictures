@@ -1,0 +1,59 @@
+.hero-section {
+  position: relative;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+
+  margin: 0 auto;
+  background-size: cover;
+}
+
+.hero-container {
+  position: absolute;
+  left: 400px;
+  top: 25%;
+}
+
+#hero-header {
+  font-family: "Times Modern", serif;
+  font-size: 64px;
+  font-weight: bold;
+  line-height: 3rem;
+}
+
+#hero-firstname {
+  padding-inline-start: 1em;
+}
+
+#hero-lastname {
+  display: block;
+  font-size: 90px;
+}
+
+#hero-header--highlight {
+  display: block;
+  color: #ff7676;
+  font-size: 3rem;
+  font-weight: bold;
+  padding-inline-start: 1em;
+
+  line-height: 35px;
+  padding-block-end: 1.5em;
+}
+
+#hero-subhead {
+  font-family: "Times Digital W04 Regular", serif;
+  padding-inline-start: 2em;
+  width: 240px;
+}
+
+#hero-scrolltext {
+  position: absolute;
+  bottom: 5em;
+
+  font-size: 0.8rem;
+  font-family: "Roboto", serif;
+}

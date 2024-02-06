@@ -1,0 +1,56 @@
+[
+  {
+    "id": 1,
+    "textPosition": "left",
+    "heading": "Kick off",
+    "minute": 0,
+    "image": "slide_1.png",
+    "text": "Loren ipsum dolor sit amet, consectetur adipiscing elit. Nulla convallis egestas rhoncus. Donec facilisis imperdiet lectus, non fringilla nunc. In hac habitasse platea dictumst. Nulla convallis egestas rhoncus. Donec facilisis imperdiet lectus, non fringilla nunc. In hac habitasse platea dictumst.",
+    "burst": false
+  },
+  {
+    "id": 2,
+    "textPosition": "left",
+    "heading": "Bright start",
+    "minute": 2,
+    "image": "slide_2.png",
+    "text": "Loren ipsum dolor sit amet, consectetur adipiscing elit. Nulla convallis egestas rhoncus. Donec facilisis imperdiet lectus, non fringilla nunc. In hac habitasse platea dictumst. Nulla convallis egestas rhoncus. Donec facilisis imperdiet lectus, non fringilla nunc. In hac habitasse platea dictumst.",
+    "burst": false
+  },
+  {
+    "id": 3,
+    "textPosition": "left",
+    "heading": "Into the thick of the action",
+    "minute": 7,
+    "image": "slide_3.png",
+    "text": "Loren ipsum dolor sit amet, consectetur adipiscing elit. Nulla convallis egestas rhoncus. Donec facilisis imperdiet lectus, non fringilla nunc. In hac habitasse platea dictumst. Nulla convallis egestas rhoncus. Donec facilisis imperdiet lectus, non fringilla nunc. In hac habitasse platea dictumst.",
+    "burst": false
+  },
+  {
+    "id": 4,
+    "textPosition": "right",
+    "heading": "Under the lights",
+    "minute": 14,
+    "image": "slide_4.png",
+    "text": "Loren ipsum dolor sit amet, consectetur adipiscing elit. Nulla convallis egestas rhoncus. Donec facilisis imperdiet lectus, non fringilla nunc. In hac habitasse platea dictumst. Nulla convallis egestas rhoncus. Donec facilisis imperdiet lectus, non fringilla nunc. In hac habitasse platea dictumst.",
+    "burst": false
+  },
+  {
+    "id": 5,
+    "textPosition": "left",
+    "heading": "Becoming influential",
+    "minute": 17,
+    "image": "slide_5.png",
+    "text": "Loren ipsum dolor sit amet, consectetur adipiscing elit. Nulla convallis egestas rhoncus. Donec facilisis imperdiet lectus, non fringilla nunc. In hac habitasse platea dictumst. Nulla convallis egestas rhoncus. Donec facilisis imperdiet lectus, non fringilla nunc. In hac habitasse platea dictumst.",
+    "burst": false
+  },
+  {
+    "id": 6,
+    "textPosition": "right",
+    "heading": "Stay clever, keep them together",
+    "minute": 26,
+    "image": "slide_6.png",
+    "text": "Loren ipsum dolor sit amet, consectetur adipiscing elit. Nulla convallis egestas rhoncus. Donec facilisis imperdiet lectus, non fringilla nunc. In hac habitasse platea dictumst. Nulla convallis egestas rhoncus. Donec facilisis imperdiet lectus, non fringilla nunc. In hac habitasse platea dictumst.",
+    "burst": true
+  }
+]
