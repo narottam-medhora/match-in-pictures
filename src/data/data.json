@@ -6,7 +6,8 @@
     "minute": 0,
     "image": "slide_1.png",
     "text": "Loren ipsum dolor sit amet, consectetur adipiscing elit. Nulla convallis egestas rhoncus. Donec facilisis imperdiet lectus, non fringilla nunc. In hac habitasse platea dictumst. Nulla convallis egestas rhoncus. Donec facilisis imperdiet lectus, non fringilla nunc. In hac habitasse platea dictumst.",
-    "burst": false
+    "burst": false,
+    "burstImages": null
   },
   {
     "id": 2,
@@ -15,7 +16,8 @@
     "minute": 2,
     "image": "slide_2.png",
     "text": "Loren ipsum dolor sit amet, consectetur adipiscing elit. Nulla convallis egestas rhoncus. Donec facilisis imperdiet lectus, non fringilla nunc. In hac habitasse platea dictumst. Nulla convallis egestas rhoncus. Donec facilisis imperdiet lectus, non fringilla nunc. In hac habitasse platea dictumst.",
-    "burst": false
+    "burst": false,
+    "burstImages": null
   },
   {
     "id": 3,
@@ -24,7 +26,8 @@
     "minute": 7,
     "image": "slide_3.png",
     "text": "Loren ipsum dolor sit amet, consectetur adipiscing elit. Nulla convallis egestas rhoncus. Donec facilisis imperdiet lectus, non fringilla nunc. In hac habitasse platea dictumst. Nulla convallis egestas rhoncus. Donec facilisis imperdiet lectus, non fringilla nunc. In hac habitasse platea dictumst.",
-    "burst": false
+    "burst": false,
+    "burstImages": null
   },
   {
     "id": 4,
@@ -33,7 +36,8 @@
     "minute": 14,
     "image": "slide_4.png",
     "text": "Loren ipsum dolor sit amet, consectetur adipiscing elit. Nulla convallis egestas rhoncus. Donec facilisis imperdiet lectus, non fringilla nunc. In hac habitasse platea dictumst. Nulla convallis egestas rhoncus. Donec facilisis imperdiet lectus, non fringilla nunc. In hac habitasse platea dictumst.",
-    "burst": false
+    "burst": false,
+    "burstImages": null
   },
   {
     "id": 5,
@@ -42,15 +46,54 @@
     "minute": 17,
     "image": "slide_5.png",
     "text": "Loren ipsum dolor sit amet, consectetur adipiscing elit. Nulla convallis egestas rhoncus. Donec facilisis imperdiet lectus, non fringilla nunc. In hac habitasse platea dictumst. Nulla convallis egestas rhoncus. Donec facilisis imperdiet lectus, non fringilla nunc. In hac habitasse platea dictumst.",
-    "burst": false
+    "burst": false,
+    "burstImages": null
   },
   {
     "id": 6,
     "textPosition": "right",
     "heading": "Stay clever, keep them together",
-    "minute": 26,
+    "minute": 32,
     "image": "slide_6.png",
     "text": "Loren ipsum dolor sit amet, consectetur adipiscing elit. Nulla convallis egestas rhoncus. Donec facilisis imperdiet lectus, non fringilla nunc. In hac habitasse platea dictumst. Nulla convallis egestas rhoncus. Donec facilisis imperdiet lectus, non fringilla nunc. In hac habitasse platea dictumst.",
-    "burst": true
+    "burst": true,
+    "burstImages": [
+      "slide_6.png",
+      "burst_1_slide_1.png",
+      "burst_1_slide_2.png",
+      "slide_6.png",
+      "burst_1_slide_1.png",
+      "burst_1_slide_2.png"
+    ]
+  },
+  {
+    "id": 7,
+    "textPosition": "left",
+    "heading": "Technique on point",
+    "minute": 41,
+    "image": "slide_7.png",
+    "text": "Loren ipsum dolor sit amet, consectetur adipiscing elit. Nulla convallis egestas rhoncus. Donec facilisis imperdiet lectus, non fringilla nunc. In hac habitasse platea dictumst. Nulla convallis egestas rhoncus. Donec facilisis imperdiet lectus, non fringilla nunc. In hac habitasse platea dictumst.",
+    "burst": false,
+    "burstImages": null
+  },
+  {
+    "id": 8,
+    "textPosition": "right",
+    "heading": "No way through",
+    "minute": 44,
+    "image": "slide_8.png",
+    "text": "Loren ipsum dolor sit amet, consectetur adipiscing elit. Nulla convallis egestas rhoncus. Donec facilisis imperdiet lectus, non fringilla nunc. In hac habitasse platea dictumst. Nulla convallis egestas rhoncus. Donec facilisis imperdiet lectus, non fringilla nunc. In hac habitasse platea dictumst.",
+    "burst": false,
+    "burstImages": null
+  },
+  {
+    "id": 9,
+    "textPosition": "right",
+    "heading": "Luton take the lead",
+    "minute": 44,
+    "image": "slide_9.png",
+    "text": "Loren ipsum dolor sit amet, consectetur adipiscing elit. Nulla convallis egestas rhoncus. Donec facilisis imperdiet lectus, non fringilla nunc. In hac habitasse platea dictumst. Nulla convallis egestas rhoncus. Donec facilisis imperdiet lectus, non fringilla nunc. In hac habitasse platea dictumst.",
+    "burst": false,
+    "burstImages": null
   }
 ]

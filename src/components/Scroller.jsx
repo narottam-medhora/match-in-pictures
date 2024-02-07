@@ -8,29 +8,46 @@ import "../styles/Scroller.css";
 import data from "../data/data.json";
 
 const Scroller = () => {
-  const [currentStepIndex, setCurrentStepIndex] = useState(0);
   const [minutes, setMinutes] = useState(0);
+
+  const [showBurst, setShowBurst] = useState(false);
+  const [burstImages, setBurstImages] = useState(null);
+  const [wasBurstPlayed, setWasBurstPlayed] = useState(false);
+
   const [gradient, setGradient] = useState(
     "linear-gradient(90deg, rgba(4,14,33,1) 0%, rgba(138,138,138,1) 25%, rgba(255,255,255,1) 100%)"
   );
-  const [showBurst, setShowBurst] = useState(false);
-  console.log(showBurst);
+
+  const [image, setImage] = useState(`url('/slide_1.png')`);
 
   // This callback fires when a Step hits the offset threshold. It receives the
   // data prop of the step, which in this demo stores the index of the step.
   const onStepEnter = (data) => {
-    setCurrentStepIndex(data.data.stepIndex);
     setMinutes(data.data.d.minute);
-    setGradient(
-      data.data.d.textPosition === "right"
-        ? "linear-gradient(-90deg, rgba(4,14,33,1) 0%, rgba(138,138,138,1) 25%, rgba(255,255,255,1) 100%)"
-        : "linear-gradient(90deg, rgba(4,14,33,1) 0%, rgba(138,138,138,1) 25%, rgba(255,255,255,1) 100%)"
-    );
 
-    if (data.data.d.burst) {
+    setImage(`url('/slide_${data.data.stepIndex + 1}.png')`);
+
+    setBurstImages(data.data.d.burstImages);
+  };
+
+  function runBurst() {
+    if (burstImages) {
+      for (let i = 0; i < burstImages.length; i++) {
+        setTimeout(() => {
+          setImage(`url('/${burstImages[i]}')`);
+        }, i * 750);
+      }
+
+      setWasBurstPlayed(true);
+    }
+  }
+
+  const onStepProgress = (data) => {
+    if (data.data.d.burst && data.progress > 0.9) {
       setShowBurst(true);
     } else {
       setShowBurst(false);
+      setWasBurstPlayed(false);
     }
   };
 
@@ -41,8 +58,8 @@ const Scroller = () => {
 
   const progressBar = arr.map((step) => {
     return step === "HT" ? (
-      <div className="step" key="step" style={{ marginBlockEnd: ".75em" }}>
-        <p id="step-halftime">HT</p>
+      <div className="step" id="halftime" key="step-halftime">
+        <p>HT</p>
       </div>
     ) : (
       <div
@@ -52,32 +69,33 @@ const Scroller = () => {
     );
   });
 
-  function handleClick() {
-    console.log("show burst");
-  }
-
   return (
     <div className="scroll-container">
       <div
         className="sticky-container"
         style={{
-          backgroundImage: `url('/slide_${
-            currentStepIndex + 1
-          }.png'), ${gradient}`,
+          backgroundImage: `${image}, linear-gradient(90deg, rgba(4,14,33,1) 0%, rgba(138,138,138,1) 25%, rgba(255,255,255,1) 100%)`,
         }}
       >
         <div className="progress-bar">{progressBar}</div>
-        {showBurst && <button onClick={handleClick}>Show burst</button>}
+        {showBurst && (
+          <button className="burst-button" onClick={runBurst}>
+            {wasBurstPlayed ? "Watch again" : "See burst"}
+          </button>
+        )}
       </div>
-      <Scrollama offset={0.8} onStepEnter={onStepEnter} debug>
+      <Scrollama
+        offset={0.8}
+        onStepEnter={onStepEnter}
+        onStepProgress={onStepProgress}
+        debug
+      >
         {data.map((d, stepIndex) => {
           return (
             <Step data={{ d, stepIndex }} key={stepIndex}>
               <div className={`step-container ${d.textPosition}`}>
                 <p className="step-heading">{d.heading}</p>
-                <p>
-                  {d.text} <br />
-                </p>
+                <p>{d.text}</p>
               </div>
             </Step>
           );

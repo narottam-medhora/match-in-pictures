@@ -5,8 +5,14 @@
 }
 
 a {
-  /* max-height: min-content; */
-  margin: 0 auto;
+  background-color: rgba(0, 0, 0, 0.5);
+  width: 100vw;
+  height: max-content;
+  padding-block: 0.75em;
+}
+
+img {
+  margin-inline: auto;
 }
 
 .hero-container {
