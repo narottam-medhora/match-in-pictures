@@ -4,7 +4,7 @@ function Hero() {
   return (
     <section
       className="hero-section"
-      style={{ backgroundImage: "url('src/assets/hero.png')" }}
+      style={{ backgroundImage: "url('public/hero.png')" }}
     >
       <div className="hero-container">
         <h1 id="hero-header">

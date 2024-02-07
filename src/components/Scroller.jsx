@@ -61,7 +61,7 @@ const Scroller = () => {
       <div
         className="sticky-container"
         style={{
-          backgroundImage: `url('src/assets/slide_${
+          backgroundImage: `url('public/slide_${
             currentStepIndex + 1
           }.png'), ${gradient}`,
         }}
