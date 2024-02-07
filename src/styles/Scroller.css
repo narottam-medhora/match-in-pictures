@@ -8,7 +8,7 @@
   position: sticky;
   height: 100svh;
   top: 0;
-  background-size: cover;
+  background-size: 100%;
   background-blend-mode: multiply;
 }
 

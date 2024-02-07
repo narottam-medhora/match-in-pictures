@@ -1,11 +1,16 @@
 import "../styles/Hero.css";
 
+import Icon from "./Icon";
+
 function Hero() {
   return (
     <section
       className="hero-section"
       style={{ backgroundImage: "url('/hero.png')" }}
     >
+      <a href="https://www.thetimes.co.uk">
+        <img src="public/times-masthead.png" />
+      </a>
       <div className="hero-container">
         <h1 id="hero-header">
           <span id="hero-firstname">Jack</span>
@@ -17,7 +22,10 @@ function Hero() {
           photographer
         </p>
       </div>
-      <p id="hero-scrolltext">Scroll to continue</p>
+      <div id="hero-scrollcontainer">
+        <p id="hero-scrollcontainer--text">Scroll to continue</p>
+        <Icon />
+      </div>
     </section>
   );
 }

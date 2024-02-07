@@ -7,7 +7,6 @@ import Navbar from "./components/Nav";
 function App() {
   return (
     <>
-      <Navbar />
       <main>
         <Hero />
         <Scroller />
