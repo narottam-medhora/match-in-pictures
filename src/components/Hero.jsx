@@ -9,7 +9,7 @@ function Hero() {
       style={{ backgroundImage: "url('/hero.png')" }}
     >
       <a href="https://www.thetimes.co.uk">
-        <img src="public/times-masthead.png" />
+        <img src="/times-masthead.png" />
       </a>
       <div className="hero-container">
         <h1 id="hero-header">
