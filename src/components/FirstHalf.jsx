@@ -2,7 +2,7 @@ import { useState } from "react";
 import { Scrollama, Step } from "react-scrollama";
 
 // Import the styles
-import "../styles/Scroller.css";
+import "../styles/FirstHalf.css";
 
 // Import the data
 import data from "../data/data.json";
@@ -10,7 +10,7 @@ import data from "../data/data.json";
 // Import components
 import ProgressBar from "./ProgressBar";
 
-const Scroller = () => {
+function FisrtHalf({ offset }) {
   // Use state to track how many minutes have passed
   const [minute, setMinute] = useState(0);
 
@@ -25,9 +25,14 @@ const Scroller = () => {
   const backgroundImages = data.map((d, i) => {
     return (
       <div
-        className={`image-container`}
+        id={`image-container--first`}
         style={{
-          backgroundImage: `url('/${d.image}')`,
+          background: `url('/${d.image}'), linear-gradient(
+            90deg,
+            rgba(0, 0, 0, 1) 0%,
+            rgba(116, 116, 116, 1) 35%,
+            rgba(255, 255, 255, 1) 100%
+          )`,
           zIndex: `${d.id}`,
           opacity: `${d.id === stepId ? 1 : 0}`,
         }}
@@ -43,25 +48,25 @@ const Scroller = () => {
   }
 
   return (
-    <div className="scroll-container">
-      <div className="sticky-container">
+    <section id="scroll-container--first">
+      <div id="sticky-container--first">
         <ProgressBar minute={minute} />
         {backgroundImages}
       </div>
-      <Scrollama offset={0.8} onStepEnter={onStepEnter} debug>
+      <Scrollama offset={offset} onStepEnter={onStepEnter} debug>
         {data.map((d, stepIndex) => {
           return (
             <Step data={{ ...d, stepIndex }} key={stepIndex}>
-              <div className={`step-container ${d.textPosition}`}>
-                <p className="step-heading">{d.heading}</p>
+              <div className={`step-container--first ${d.textPosition}`}>
+                <p className="step-heading--first">{d.heading}</p>
                 <p>{d.text}</p>
               </div>
             </Step>
           );
         })}
       </Scrollama>
-    </div>
+    </section>
   );
-};
+}
 
-export default Scroller;
+export default FisrtHalf;
