@@ -8,9 +8,19 @@
   position: sticky;
   height: 100svh;
   top: 0;
+}
 
+.image-container {
+  position: absolute;
+  height: 100%;
+  width: 100%;
+
+  top: 0;
+  left: 0;
+
+  background: linear-gradient();
   background-size: 100%;
-  background-blend-mode: multiply;
+  transition: opacity 500ms ease-in;
 }
 
 .step-container:first-of-type {
@@ -40,55 +50,4 @@
 
 .step-heading {
   color: #ff7676;
-}
-
-.progress-bar {
-  position: absolute;
-  top: 9em;
-  left: 2em;
-  height: 80svh;
-
-  display: flex;
-  flex-direction: column;
-}
-
-.step {
-  height: 1px;
-  width: 10px;
-
-  margin: 0.15em;
-}
-
-#halftime {
-  width: max-content;
-  font-size: 0.8rem;
-  font-family: "Roboto", sans-serif;
-  color: #ff7676;
-  margin-block-end: 1.5em;
-}
-
-.active {
-  background-color: #ff7676;
-}
-
-.inactive {
-  background-color: #ffffff;
-  opacity: 75%;
-}
-
-.burst-button {
-  position: absolute;
-  background: none;
-  border: 1px solid white;
-  color: white;
-  left: 65%;
-  bottom: 5em;
-
-  width: 240px;
-  padding-block: 0.5em;
-
-  font-family: "Roboto", serif;
-  font-size: 1rem;
-
-  cursor: pointer;
 }
