@@ -10,7 +10,7 @@ import data from "../data/data.json";
 // Import components
 import ProgressBar from "./ProgressBar";
 
-function FisrtHalf({ offset }) {
+function FisrtHalf() {
   // Use state to track how many minutes have passed
   const [minute, setMinute] = useState(0);
 
@@ -27,12 +27,7 @@ function FisrtHalf({ offset }) {
       <div
         id={`image-container--first`}
         style={{
-          background: `url('/${d.image}'), linear-gradient(
-            90deg,
-            rgba(0, 0, 0, 1) 0%,
-            rgba(116, 116, 116, 1) 35%,
-            rgba(255, 255, 255, 1) 100%
-          )`,
+          backgroundImage: `url('/${d.image}')`,
           zIndex: `${d.id}`,
           opacity: `${d.id === stepId ? 1 : 0}`,
         }}
@@ -53,7 +48,7 @@ function FisrtHalf({ offset }) {
         <ProgressBar minute={minute} />
         {backgroundImages}
       </div>
-      <Scrollama offset={offset} onStepEnter={onStepEnter} debug>
+      <Scrollama offset={0.8} onStepEnter={onStepEnter} debug>
         {data.map((d, stepIndex) => {
           return (
             <Step data={{ ...d, stepIndex }} key={stepIndex}>

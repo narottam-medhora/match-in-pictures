@@ -1,3 +1,4 @@
+/* eslint-disable react/prop-types */
 import { useState } from "react";
 import { Scrollama, Step } from "react-scrollama";
 
@@ -8,7 +9,7 @@ import "../styles/Halftime.css";
 import HalftimeIcon from "./HalftimeIcon";
 import Pitch from "./Pitch";
 
-function Halftime({ offset, touchCoordinates }) {
+function Halftime({ touchCoordinates }) {
   const [activeStep, setActiveStep] = useState(0);
 
   function onStepEnter(obj) {
@@ -43,9 +44,9 @@ function Halftime({ offset, touchCoordinates }) {
             culpa qui officia deserunt mollit anim id est laborum
           </p>
         </div>
-        <Pitch touchCoordinates={touchCoordinates} />
+        <Pitch touchCoordinates={touchCoordinates} activeStep={activeStep} />
       </div>
-      <Scrollama offset={offset} onStepEnter={onStepEnter}>
+      <Scrollama offset={0.8} onStepEnter={onStepEnter}>
         {[1, 2, 3, 4, 5].map((_, stepIndex) => {
           return (
             <Step data={stepIndex} key={stepIndex}>

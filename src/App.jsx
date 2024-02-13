@@ -7,7 +7,7 @@ import Halftime from "./components/Halftime";
 const NUMBER_OF_TOUCHES = 50;
 
 function App() {
-  // Generate an array of coordinates between random numbers
+  // Generate an array of coordinates between random numbers to mimic a touch map
   const touchCoordinates = Array.from(Array(NUMBER_OF_TOUCHES).keys()).map(
     (d) => {
       return {
@@ -21,8 +21,8 @@ function App() {
   return (
     <main>
       <Hero />
-      <FirstHalf offset={0.8} />
-      <Halftime offset={0.8} touchCoordinates={touchCoordinates} />
+      <FirstHalf />
+      <Halftime touchCoordinates={touchCoordinates} />
     </main>
   );
 }

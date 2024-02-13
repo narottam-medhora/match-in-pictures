@@ -1,8 +1,9 @@
+/* eslint-disable react/prop-types */
 import useChartDimensions from "../hooks/useChartDimensions";
 
 import { scaleLinear } from "d3-scale";
 
-function Pitch({ touchCoordinates }) {
+function Pitch({ activeStep, touchCoordinates }) {
   const chartSettings = {};
   const [ref, dms] = useChartDimensions(chartSettings);
 
@@ -25,6 +26,7 @@ function Pitch({ touchCoordinates }) {
         r={5}
         fill="#FF7676"
         key={i}
+        opacity={activeStep >= 4 ? 1 : 0}
       ></circle>
     );
   });
