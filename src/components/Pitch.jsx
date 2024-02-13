@@ -3,7 +3,7 @@ import useChartDimensions from "../hooks/useChartDimensions";
 
 import { scaleLinear } from "d3-scale";
 
-function Pitch({ activeStep, touchCoordinates }) {
+function Pitch({ stepId, touchCoordinates }) {
   const chartSettings = {};
   const [ref, dms] = useChartDimensions(chartSettings);
 
@@ -26,13 +26,17 @@ function Pitch({ activeStep, touchCoordinates }) {
         r={5}
         fill="#FF7676"
         key={i}
-        opacity={activeStep >= 4 ? 1 : 0}
+        opacity={stepId >= 14 ? 1 : 0}
       ></circle>
     );
   });
 
   return (
-    <div className="pitch-container" ref={ref}>
+    <div
+      id="pitch-container"
+      ref={ref}
+      style={{ opacity: stepId >= 14 ? 1 : 0 }}
+    >
       <svg id="pitch" width={dms.width} height={dms.height}>
         <g transform={`translate(${dms.marginLeft}, ${dms.marginTop})`}>
           <g id="pitch-markers">

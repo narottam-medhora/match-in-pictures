@@ -1,3 +1,4 @@
+/* eslint-disable react/prop-types */
 // Import styles
 import "../styles/ProgressBar.css";
 
@@ -10,7 +11,7 @@ function ProgressBar({ minute }) {
   const progressBars = arr.map((step) => {
     return step === "HT" ? (
       <div className="bar" id="halftime" key="bar-halftime">
-        <p>HT</p>
+        <p style={{ color: minute >= 45 ? "#ff7676" : "white" }}>HT</p>
       </div>
     ) : (
       <div

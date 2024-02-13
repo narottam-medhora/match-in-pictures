@@ -1,3 +1,4 @@
+/* eslint-disable react/prop-types */
 import { useState } from "react";
 import { Scrollama, Step } from "react-scrollama";
 
@@ -9,8 +10,9 @@ import data from "../data/data.json";
 
 // Import components
 import ProgressBar from "./ProgressBar";
+import Halftime from "./Halftime";
 
-function FisrtHalf() {
+function FisrtHalf({ touchCoordinates }) {
   // Use state to track how many minutes have passed
   const [minute, setMinute] = useState(0);
 
@@ -25,9 +27,13 @@ function FisrtHalf() {
   const backgroundImages = data.map((d, i) => {
     return (
       <div
-        id={`image-container--first`}
+        id={`image-container`}
         style={{
-          backgroundImage: `url('/${d.image}')`,
+          background:
+            d.gameStage === "ht"
+              ? "black"
+              : `center/cover no-repeat url('/${d.image}')`,
+
           zIndex: `${d.id}`,
           opacity: `${d.id === stepId ? 1 : 0}`,
         }}
@@ -43,17 +49,29 @@ function FisrtHalf() {
   }
 
   return (
-    <section id="scroll-container--first">
-      <div id="sticky-container--first">
-        <ProgressBar minute={minute} />
+    <section id="scroll-container">
+      <div id="sticky-container">
+        {/* The series of divs containing the background images */}
         {backgroundImages}
+        {/* Don't show the progress bar during the halftime analysis section */}
+        <ProgressBar minute={minute} />
+        {/* Show the halftime component only when the minute value is 'ht' */}
+        <Halftime
+          minute={minute}
+          stepId={stepId}
+          touchCoordinates={touchCoordinates}
+        />
       </div>
       <Scrollama offset={0.8} onStepEnter={onStepEnter} debug>
         {data.map((d, stepIndex) => {
           return (
             <Step data={{ ...d, stepIndex }} key={stepIndex}>
-              <div className={`step-container--first ${d.textPosition}`}>
-                <p className="step-heading--first">{d.heading}</p>
+              <div
+                className={`step-container ${d.textPosition} ${
+                  d.gameStage === "ht" && "ht"
+                }`}
+              >
+                <p className="step-heading">{d.heading}</p>
                 <p>{d.text}</p>
               </div>
             </Step>

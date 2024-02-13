@@ -4,96 +4,269 @@
     "textPosition": "left",
     "heading": "Kick off",
     "minute": 0,
+    "gameStage": "fh",
     "image": "slide_1.png",
     "text": "Loren ipsum dolor sit amet, consectetur adipiscing elit. Nulla convallis egestas rhoncus. Donec facilisis imperdiet lectus, non fringilla nunc. In hac habitasse platea dictumst. Nulla convallis egestas rhoncus. Donec facilisis imperdiet lectus, non fringilla nunc. In hac habitasse platea dictumst.",
-    "burst": false,
-    "burstImages": null
+    "burst": false
   },
   {
     "id": 2,
     "textPosition": "left",
     "heading": "Bright start",
     "minute": 2,
+    "gameStage": "fh",
     "image": "slide_2.png",
     "text": "Loren ipsum dolor sit amet, consectetur adipiscing elit. Nulla convallis egestas rhoncus. Donec facilisis imperdiet lectus, non fringilla nunc. In hac habitasse platea dictumst. Nulla convallis egestas rhoncus. Donec facilisis imperdiet lectus, non fringilla nunc. In hac habitasse platea dictumst.",
-    "burst": false,
-    "burstImages": null
+    "burst": false
   },
   {
     "id": 3,
     "textPosition": "left",
     "heading": "Into the thick of the action",
     "minute": 7,
+    "gameStage": "fh",
     "image": "slide_3.png",
     "text": "Loren ipsum dolor sit amet, consectetur adipiscing elit. Nulla convallis egestas rhoncus. Donec facilisis imperdiet lectus, non fringilla nunc. In hac habitasse platea dictumst. Nulla convallis egestas rhoncus. Donec facilisis imperdiet lectus, non fringilla nunc. In hac habitasse platea dictumst.",
-    "burst": false,
-    "burstImages": null
+    "burst": false
   },
   {
     "id": 4,
     "textPosition": "right",
     "heading": "Under the lights",
     "minute": 14,
+    "gameStage": "fh",
     "image": "slide_4.png",
     "text": "Loren ipsum dolor sit amet, consectetur adipiscing elit. Nulla convallis egestas rhoncus. Donec facilisis imperdiet lectus, non fringilla nunc. In hac habitasse platea dictumst. Nulla convallis egestas rhoncus. Donec facilisis imperdiet lectus, non fringilla nunc. In hac habitasse platea dictumst.",
-    "burst": false,
-    "burstImages": null
+    "burst": false
   },
   {
     "id": 5,
     "textPosition": "left",
     "heading": "Becoming influential",
     "minute": 17,
+    "gameStage": "fh",
     "image": "slide_5.png",
     "text": "Loren ipsum dolor sit amet, consectetur adipiscing elit. Nulla convallis egestas rhoncus. Donec facilisis imperdiet lectus, non fringilla nunc. In hac habitasse platea dictumst. Nulla convallis egestas rhoncus. Donec facilisis imperdiet lectus, non fringilla nunc. In hac habitasse platea dictumst.",
-    "burst": false,
-    "burstImages": null
+    "burst": false
   },
   {
     "id": 6,
     "textPosition": "right",
     "heading": "Stay clever, keep them together",
     "minute": 32,
+    "gameStage": "fh",
     "image": "slide_6.png",
     "text": "Loren ipsum dolor sit amet, consectetur adipiscing elit. Nulla convallis egestas rhoncus. Donec facilisis imperdiet lectus, non fringilla nunc. In hac habitasse platea dictumst. Nulla convallis egestas rhoncus. Donec facilisis imperdiet lectus, non fringilla nunc. In hac habitasse platea dictumst.",
-    "burst": true,
-    "burstImages": [
-      "slide_6.png",
-      "burst_1_slide_1.png",
-      "burst_1_slide_2.png",
-      "slide_6.png",
-      "burst_1_slide_1.png",
-      "burst_1_slide_2.png"
-    ]
+    "burst": true
   },
   {
     "id": 7,
     "textPosition": "left",
     "heading": "Technique on point",
     "minute": 41,
+    "gameStage": "fh",
     "image": "slide_7.png",
     "text": "Loren ipsum dolor sit amet, consectetur adipiscing elit. Nulla convallis egestas rhoncus. Donec facilisis imperdiet lectus, non fringilla nunc. In hac habitasse platea dictumst. Nulla convallis egestas rhoncus. Donec facilisis imperdiet lectus, non fringilla nunc. In hac habitasse platea dictumst.",
-    "burst": false,
-    "burstImages": null
+    "burst": false
   },
   {
     "id": 8,
     "textPosition": "right",
     "heading": "No way through",
     "minute": 44,
+    "gameStage": "fh",
     "image": "slide_8.png",
     "text": "Loren ipsum dolor sit amet, consectetur adipiscing elit. Nulla convallis egestas rhoncus. Donec facilisis imperdiet lectus, non fringilla nunc. In hac habitasse platea dictumst. Nulla convallis egestas rhoncus. Donec facilisis imperdiet lectus, non fringilla nunc. In hac habitasse platea dictumst.",
-    "burst": false,
-    "burstImages": null
+    "burst": false
   },
   {
     "id": 9,
     "textPosition": "right",
     "heading": "Luton take the lead",
     "minute": 44,
+    "gameStage": "fh",
     "image": "slide_9.png",
     "text": "Loren ipsum dolor sit amet, consectetur adipiscing elit. Nulla convallis egestas rhoncus. Donec facilisis imperdiet lectus, non fringilla nunc. In hac habitasse platea dictumst. Nulla convallis egestas rhoncus. Donec facilisis imperdiet lectus, non fringilla nunc. In hac habitasse platea dictumst.",
-    "burst": false,
-    "burstImages": null
+    "burst": false
+  },
+  {
+    "id": 10,
+    "textPosition": "none",
+    "heading": null,
+    "minute": 45,
+    "gameStage": "ht",
+    "image": null,
+    "text": null,
+    "burst": false
+  },
+  {
+    "id": 11,
+    "textPosition": "none",
+    "heading": null,
+    "minute": 45,
+    "gameStage": "ht",
+    "image": null,
+    "text": null,
+    "burst": false
+  },
+  {
+    "id": 12,
+    "textPosition": "none",
+    "heading": null,
+    "minute": 45,
+    "gameStage": "ht",
+    "image": null,
+    "text": null,
+    "burst": false
+  },
+  {
+    "id": 13,
+    "textPosition": "none",
+    "heading": null,
+    "minute": 45,
+    "gameStage": "ht",
+    "image": null,
+    "text": null,
+    "burst": false
+  },
+  {
+    "id": 14,
+    "textPosition": "none",
+    "heading": null,
+    "minute": 45,
+    "gameStage": "ht",
+    "image": null,
+    "text": null,
+    "burst": false
+  },
+  {
+    "id": 15,
+    "textPosition": "left",
+    "heading": "Most fouled player in the league",
+    "minute": 56,
+    "gameStage": "sh",
+    "image": "slide_10.jpg",
+    "text": "Loren ipsum dolor sit amet, consectetur adipiscing elit. Nulla convallis egestas rhoncus. Donec facilisis imperdiet lectus, non fringilla nunc. In hac habitasse platea dictumst. Nulla convallis egestas rhoncus. Donec facilisis imperdiet lectus, non fringilla nunc. In hac habitasse platea dictumst.",
+    "burst": false
+  },
+  {
+    "id": 16,
+    "textPosition": "right",
+    "heading": "62 mins! Goal, Grealish scores",
+    "minute": 62,
+    "gameStage": "sh",
+    "image": "slide_11.jpg",
+    "text": "Loren ipsum dolor sit amet, consectetur adipiscing elit. Nulla convallis egestas rhoncus. Donec facilisis imperdiet lectus, non fringilla nunc. In hac habitasse platea dictumst. Nulla convallis egestas rhoncus. Donec facilisis imperdiet lectus, non fringilla nunc. In hac habitasse platea dictumst.",
+    "burst": true
+  },
+  {
+    "id": 17,
+    "textPosition": "left",
+    "heading": "All action",
+    "minute": 69,
+    "gameStage": "sh",
+    "image": "slide_12.jpg",
+    "text": "Loren ipsum dolor sit amet, consectetur adipiscing elit. Nulla convallis egestas rhoncus. Donec facilisis imperdiet lectus, non fringilla nunc. In hac habitasse platea dictumst. Nulla convallis egestas rhoncus. Donec facilisis imperdiet lectus, non fringilla nunc. In hac habitasse platea dictumst.",
+    "burst": false
+  },
+  {
+    "id": 18,
+    "textPosition": "left",
+    "heading": "Crowd favourite",
+    "minute": 73,
+    "gameStage": "sh",
+    "image": "slide_13.jpg",
+    "text": "Loren ipsum dolor sit amet, consectetur adipiscing elit. Nulla convallis egestas rhoncus. Donec facilisis imperdiet lectus, non fringilla nunc. In hac habitasse platea dictumst. Nulla convallis egestas rhoncus. Donec facilisis imperdiet lectus, non fringilla nunc. In hac habitasse platea dictumst.",
+    "burst": false
+  },
+  {
+    "id": 19,
+    "textPosition": "right",
+    "heading": "In control",
+    "minute": 79,
+    "gameStage": "sh",
+    "image": "slide_14.jpg",
+    "text": "Loren ipsum dolor sit amet, consectetur adipiscing elit. Nulla convallis egestas rhoncus. Donec facilisis imperdiet lectus, non fringilla nunc. In hac habitasse platea dictumst. Nulla convallis egestas rhoncus. Donec facilisis imperdiet lectus, non fringilla nunc. In hac habitasse platea dictumst.",
+    "burst": false
+  },
+  {
+    "id": 20,
+    "textPosition": "left",
+    "heading": "Old mates",
+    "minute": 84,
+    "gameStage": "sh",
+    "image": "slide_15.jpg",
+    "text": "Loren ipsum dolor sit amet, consectetur adipiscing elit. Nulla convallis egestas rhoncus. Donec facilisis imperdiet lectus, non fringilla nunc. In hac habitasse platea dictumst. Nulla convallis egestas rhoncus. Donec facilisis imperdiet lectus, non fringilla nunc. In hac habitasse platea dictumst.",
+    "burst": false
+  },
+  {
+    "id": 21,
+    "textPosition": "none",
+    "heading": "Full time",
+    "minute": 90,
+    "gameStage": "sh",
+    "image": "slide_16.jpg",
+    "text": null,
+    "burst": false
+  },
+  {
+    "id": 22,
+    "textPosition": "none",
+    "heading": null,
+    "minute": 90,
+    "gameStage": "sh",
+    "image": "slide_17.png",
+    "text": null,
+    "burst": false
+  },
+  {
+    "id": 23,
+    "textPosition": "none",
+    "heading": null,
+    "minute": 90,
+    "gameStage": "sh",
+    "image": "slide_18.png",
+    "text": null,
+    "burst": false
+  },
+  {
+    "id": 24,
+    "textPosition": "none",
+    "heading": null,
+    "minute": 90,
+    "gameStage": "sh",
+    "image": "slide_19.png",
+    "text": null,
+    "burst": false
+  },
+  {
+    "id": 25,
+    "textPosition": "none",
+    "heading": null,
+    "minute": 90,
+    "gameStage": "sh",
+    "image": "slide_20.png",
+    "text": null,
+    "burst": false
+  },
+  {
+    "id": 26,
+    "textPosition": "none",
+    "heading": null,
+    "minute": 90,
+    "gameStage": "sh",
+    "image": "slide_21.png",
+    "text": null,
+    "burst": false
+  },
+  {
+    "id": 27,
+    "textPosition": "none",
+    "heading": null,
+    "minute": 90,
+    "gameStage": "sh",
+    "image": "slide_22.png",
+    "text": null,
+    "burst": false
   }
 ]

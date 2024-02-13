@@ -2,7 +2,6 @@ import "./styles/App.css";
 
 import FirstHalf from "./components/FirstHalf";
 import Hero from "./components/Hero";
-import Halftime from "./components/Halftime";
 
 const NUMBER_OF_TOUCHES = 50;
 
@@ -21,8 +20,7 @@ function App() {
   return (
     <main>
       <Hero />
-      <FirstHalf />
-      <Halftime touchCoordinates={touchCoordinates} />
+      <FirstHalf touchCoordinates={touchCoordinates} />
     </main>
   );
 }
