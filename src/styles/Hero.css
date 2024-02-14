@@ -82,7 +82,7 @@ img {
 svg > #wheel,
 svg > #chevron {
   transform-origin: 0 10px;
-  animation: scroll 0.75s ease-out infinite;
+  animation: scroll 1s ease-out infinite;
 }
 
 @keyframes scroll {
@@ -91,7 +91,7 @@ svg > #chevron {
   }
 
   50% {
-    transform: translateY(0.1em);
+    transform: translateY(0.2em);
   }
 
   100% {

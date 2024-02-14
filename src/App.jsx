@@ -1,6 +1,6 @@
 import "./styles/App.css";
 
-import FirstHalf from "./components/FirstHalf";
+import Scroller from "./components/Scroller";
 import Hero from "./components/Hero";
 
 const NUMBER_OF_TOUCHES = 50;
@@ -20,7 +20,7 @@ function App() {
   return (
     <main>
       <Hero />
-      <FirstHalf touchCoordinates={touchCoordinates} />
+      <Scroller touchCoordinates={touchCoordinates} />
     </main>
   );
 }

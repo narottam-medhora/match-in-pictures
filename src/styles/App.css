@@ -23,6 +23,7 @@ body {
 
   background-color: black;
   color: white;
+  overflow-x: hidden;
 }
 /*
     5. Improve media defaults

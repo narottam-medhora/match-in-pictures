@@ -1,5 +1,5 @@
 #scroll-container {
-  font-size: 18px;
+  font-size: 1rem;
   font-family: "Times Modern", serif;
 }
 
@@ -30,7 +30,7 @@
 
   width: 30svw;
   padding: 0.5em;
-  min-height: 200px;
+  min-height: min-content;
 
   background-color: rgba(0, 0, 0, 0.25);
   border-radius: 10px;
@@ -46,8 +46,9 @@
 
 /* For the halftime slides, reduce the gap between steps */
 .step-container.ht {
-  margin-block: 5svh;
   opacity: 0;
+  min-height: 10em;
+  margin-block: 5svh;
 }
 
 .step-container.ht:first-of-type {
@@ -55,7 +56,7 @@
 }
 
 .step-container.ht:last-of-type {
-  margin-block-end: 0;
+  margin-block-end: 5svh;
 }
 
 .right {
@@ -72,6 +73,12 @@
 }
 
 /* HALFTIME STYLES */
+
+#rect-1,
+#rect-2,
+#rect-3 {
+  transition: opacity 250ms ease-in;
+}
 
 #halftime-container {
   position: sticky;
@@ -94,14 +101,62 @@
 
 #halftime-container--text {
   width: 70%;
-
-  h1,
-  p {
-    transition: opacity 250ms ease-in;
-  }
+  margin-block-start: 1em;
 }
+
+#halftime-header {
+  color: #ffdf7e;
+  font-family: "Times Modern", serif;
+  font-size: 80px;
+  line-height: 50px;
+  transition: opacity 250ms ease-in;
+  margin-inline-start: 1.5em;
+}
+
+#halftime-subhead {
+  display: block;
+  font-size: 45px;
+  color: #ff7676;
+  margin-inline-start: 3.5em;
+  transition: opacity 250ms ease-in;
+}
+
+#halftime-analysis {
+  margin-block-start: 1em;
+}
+
+#second-half--header {
+  color: #ffdf7e;
+  font-family: "Times Modern", serif;
+  font-size: 45px;
+  transition: opacity 250ms ease-in;
+}
+
+#second-half--subhead {
+  color: #ff7676;
+  font-size: 8rem;
+  display: block;
+  line-height: 5rem;
+}
+
+hr {
+  width: 100%;
+  margin-inline: auto;
+  margin-block-start: 1em;
+
+  border: none;
+  border-block-start: 1px dashed whitesmoke;
+  transition: opacity 250ms ease-in;
+}
+
+/* PITCH STYLES */
 
 #pitch-container {
   width: 100%;
   height: 600px;
+}
+
+.line {
+  stroke: white;
+  stroke-width: 2px;
 }

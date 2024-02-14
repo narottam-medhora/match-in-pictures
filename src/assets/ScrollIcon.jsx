@@ -1,4 +1,4 @@
-function Icon() {
+function ScrollIcon() {
   return (
     <svg id="hero-scrollcontainer--icon" width={18} height={50}>
       <g id="mouse">
@@ -15,4 +15,4 @@ function Icon() {
   );
 }
 
-export default Icon;
+export default ScrollIcon;

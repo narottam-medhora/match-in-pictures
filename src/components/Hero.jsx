@@ -1,6 +1,6 @@
 import "../styles/Hero.css";
 
-import Icon from "./Icon";
+import ScrollIcon from "../assets/ScrollIcon";
 
 function Hero() {
   return (
@@ -24,7 +24,7 @@ function Hero() {
       </div>
       <div id="hero-scrollcontainer">
         <p id="hero-scrollcontainer--text">Scroll to continue</p>
-        <Icon />
+        <ScrollIcon />
       </div>
     </section>
   );
