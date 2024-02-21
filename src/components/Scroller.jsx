@@ -11,6 +11,7 @@ import data from "../data/data.json";
 // Import components
 import ProgressBar from "./ProgressBar";
 import Halftime from "./Halftime";
+import Burst from "./Burst";
 
 function Scroller({ touchCoordinates }) {
   // Use state to track how many minutes have passed
@@ -21,6 +22,18 @@ function Scroller({ touchCoordinates }) {
 
   // Use state to track when the last HT slide was exited
   const [isHalfTimeOver, setIsHalfTimeOver] = useState(false);
+
+  // Use state to set the visibility of the burst button
+  const [isBurstButtonVisible, setIsBurstButtonVisible] = useState(false);
+
+  // Use state to set the visibility of the burst
+  const [isBurstVisible, setIsBurstVisible] = useState(false);
+
+  // Store the index of the first image to be displayed
+  const [visibleImageIndex, setVisibleImageIndex] = useState(0);
+
+  // Store the array of images for the burst container
+  const [burstImages, setBurstImages] = useState([]);
 
   /* 
     Create a series of <div> elements based on the data. The z-index of these elements
@@ -41,11 +54,15 @@ function Scroller({ touchCoordinates }) {
           opacity: `${d.id === stepId ? 1 : 0}`,
         }}
         key={i}
-      >
-        <button className="burst-button">Show burst</button>
-      </div>
+      />
     );
   });
+
+  // Run the burst when the button is clicked
+  function runBurst() {
+    setVisibleImageIndex(0);
+    setIsBurstVisible(true);
+  }
 
   // Update the background image container when a step is entered
   function onStepEnter({ ...obj }) {
@@ -55,6 +72,11 @@ function Scroller({ touchCoordinates }) {
     // If the last HT step is scrolled back to, set the corresponding state to false
     if (obj.data.minute === 45 && obj.direction === "up") {
       setIsHalfTimeOver(false);
+    }
+
+    // If the step contains a burst, set the array of images for that specific burst
+    if (obj.data.burst) {
+      setBurstImages(obj.data.burstImages);
     }
   }
 
@@ -66,11 +88,21 @@ function Scroller({ touchCoordinates }) {
     }
   }
 
+  function onStepProgress({ ...obj }) {
+    // If the step contains a burst, set the visibility of the burst button to true
+    if (obj.data.burst && obj.progress > 0.5) {
+      setIsBurstButtonVisible(true);
+    } else {
+      setIsBurstButtonVisible(false);
+      setIsBurstVisible(false);
+    }
+  }
+
   return (
     <section id="scroll-container">
       <div id="sticky-container">
         {/* The series of divs containing the background images */}
-        {backgroundImages}
+        {!isBurstVisible && backgroundImages}
         <ProgressBar minute={minute} />
         <Halftime
           minute={minute}
@@ -78,11 +110,28 @@ function Scroller({ touchCoordinates }) {
           touchCoordinates={touchCoordinates}
           isHalfTimeOver={isHalfTimeOver}
         />
+
+        <button
+          className="burst-button"
+          onClick={runBurst}
+          style={{ opacity: isBurstButtonVisible ? 1 : 0 }}
+        >
+          {isBurstVisible ? "Watch again" : "Show burst"}
+        </button>
+
+        {isBurstVisible && (
+          <Burst
+            burstImages={burstImages}
+            visibleImageIndex={visibleImageIndex}
+            setVisibleImageIndex={setVisibleImageIndex}
+          />
+        )}
       </div>
       <Scrollama
         offset={0.8}
         onStepEnter={onStepEnter}
         onStepExit={onStepExit}
+        onStepProgress={onStepProgress}
         debug
       >
         {data.map((d, stepIndex) => {
@@ -95,7 +144,6 @@ function Scroller({ touchCoordinates }) {
               >
                 <p className="step-heading">{d.heading}</p>
                 <p>{d.text}</p>
-                <p></p>
               </div>
             </Step>
           );

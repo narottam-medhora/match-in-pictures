@@ -11,7 +11,7 @@ function Halftime({ stepId, minute, touchCoordinates, isHalfTimeOver }) {
       // If the minute value is 45 and the last halftime step container has
       // not been scrolled past, show the container
       style={{
-        visibility: minute === 45 && !isHalfTimeOver ? "visible" : "hidden",
+        opacity: minute === 45 && !isHalfTimeOver ? 1 : 0,
       }}
     >
       <div id="halftime-container--text">

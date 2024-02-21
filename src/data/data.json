@@ -57,7 +57,8 @@
     "gameStage": "fh",
     "image": "slide_6.png",
     "text": "Loren ipsum dolor sit amet, consectetur adipiscing elit. Nulla convallis egestas rhoncus. Donec facilisis imperdiet lectus, non fringilla nunc. In hac habitasse platea dictumst. Nulla convallis egestas rhoncus. Donec facilisis imperdiet lectus, non fringilla nunc. In hac habitasse platea dictumst.",
-    "burst": true
+    "burst": true,
+    "burstImages": ["slide_6.png", "burst_1_slide_1.png", "burst_1_slide_2.png"]
   },
   {
     "id": 7,
@@ -157,7 +158,17 @@
     "gameStage": "sh",
     "image": "slide_11.jpg",
     "text": "Loren ipsum dolor sit amet, consectetur adipiscing elit. Nulla convallis egestas rhoncus. Donec facilisis imperdiet lectus, non fringilla nunc. In hac habitasse platea dictumst. Nulla convallis egestas rhoncus. Donec facilisis imperdiet lectus, non fringilla nunc. In hac habitasse platea dictumst.",
-    "burst": true
+    "burst": true,
+    "burstImages": [
+      "burst_2_slide_1.jpg",
+      "burst_2_slide_2.jpg",
+      "burst_2_slide_3.jpg",
+      "burst_2_slide_4.jpg",
+      "burst_2_slide_5.jpg",
+      "burst_2_slide_6.jpg",
+      "burst_2_slide_7.jpg",
+      "burst_2_slide_8.jpg"
+    ]
   },
   {
     "id": 17,
