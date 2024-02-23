@@ -11,7 +11,7 @@
 
 /* BACKGROUND IMAGE STYLES */
 
-#image-container {
+.image-container {
   position: absolute;
   height: 100%;
   width: 100%;
@@ -19,7 +19,7 @@
   top: 0;
   left: 0;
 
-  transition: opacity 500ms ease-in;
+  transition: opacity 500ms ease-in, transform 1s ease-in 1s;
 }
 
 .burst-container {
@@ -196,4 +196,25 @@ hr {
 .line {
   stroke: white;
   stroke-width: 2px;
+}
+
+/* ANNOTATED SLIDE STYLES */
+
+#annotated-slide--container {
+  height: 100svh;
+  width: 100%;
+
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 999;
+  transition: opacity 1s ease-in 1s;
+}
+
+#annotated-slide {
+  transition: opacity 250ms ease-in;
+}
+
+#annotated-slide > g {
+  transition: opacity 250ms ease-in;
 }

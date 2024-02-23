@@ -12,6 +12,7 @@ import data from "../data/data.json";
 import ProgressBar from "./ProgressBar";
 import Halftime from "./Halftime";
 import Burst from "./Burst";
+import AnnotatedSlide from "./AnnotatedSlide";
 
 function Scroller({ touchCoordinates }) {
   // Use state to track how many minutes have passed
@@ -35,15 +36,23 @@ function Scroller({ touchCoordinates }) {
   // Store the array of images for the burst container
   const [burstImages, setBurstImages] = useState([]);
 
+  // Store state to manage the visibility of the annotated slide
+  const [isAnnotatedSlideVisible, setIsAnnotatedSlideVisible] = useState(false);
+
+  // Store state to track the step progress
+  const [stepProgress, setStepProgress] = useState(0);
+
   /* 
     Create a series of <div> elements based on the data. The z-index of these elements
     increases with the stepID. The opacity of the elements are set to 0, except when they
     are active. We use a simple CSS opacity animation to transition between the visible elements
    */
+
+  // scale(1.8) translate(-40px, -140px)
   const backgroundImages = data.map((d, i) => {
     return (
       <div
-        id={`image-container`}
+        className={`image-container`}
         style={{
           background:
             d.gameStage === "ht"
@@ -52,6 +61,11 @@ function Scroller({ touchCoordinates }) {
 
           zIndex: `${d.id}`,
           opacity: `${d.id === stepId ? 1 : 0}`,
+          transform: `${
+            d.isAnnotated && isAnnotatedSlideVisible
+              ? "scale(1.5) translate(-215px, -150px)"
+              : "scale(1)"
+          }`,
         }}
         key={i}
       />
@@ -78,6 +92,11 @@ function Scroller({ touchCoordinates }) {
     if (obj.data.burst) {
       setBurstImages(obj.data.burstImages);
     }
+
+    // If the step contains an annotated slide, set the corresponding state to true
+    if (obj.data.isAnnotated) {
+      setIsAnnotatedSlideVisible(true);
+    }
   }
 
   function onStepExit({ ...obj }) {
@@ -85,6 +104,11 @@ function Scroller({ touchCoordinates }) {
     // ! 14 just happens to be the last value of the 'ht' slide for the Grealish data
     if (obj.data.id === 14) {
       setIsHalfTimeOver(true);
+    }
+
+    // If the step was annotated, reset the value of isAnnotatedSlide visible
+    if (obj.data.isAnnotated) {
+      setIsAnnotatedSlideVisible(false);
     }
   }
 
@@ -96,6 +120,8 @@ function Scroller({ touchCoordinates }) {
       setIsBurstButtonVisible(false);
       setIsBurstVisible(false);
     }
+
+    setStepProgress(obj.progress);
   }
 
   return (
@@ -126,6 +152,10 @@ function Scroller({ touchCoordinates }) {
             setVisibleImageIndex={setVisibleImageIndex}
           />
         )}
+        <AnnotatedSlide
+          isAnnotatedSlideVisible={isAnnotatedSlideVisible}
+          stepProgress={stepProgress}
+        />
       </div>
       <Scrollama
         offset={0.8}
