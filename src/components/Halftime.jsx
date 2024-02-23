@@ -5,7 +5,6 @@ import HalftimeIcon from "../assets/HalftimeIcon";
 import Pitch from "./Pitch";
 
 function Halftime({ minute, touchCoordinates, stepProgress }) {
-  console.log(stepProgress);
   return (
     <>
       <div
@@ -30,7 +29,7 @@ function Halftime({ minute, touchCoordinates, stepProgress }) {
           <h1
             id="second-half--header"
             style={{
-              opacity: stepProgress > 0.8 ? 1 : 0,
+              opacity: minute === 45 && stepProgress > 0.8 ? 1 : 0,
             }}
           >
             Second

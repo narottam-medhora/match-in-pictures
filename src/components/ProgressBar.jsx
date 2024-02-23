@@ -16,7 +16,9 @@ function ProgressBar({ minute }) {
     ) : (
       <div
         key={step}
-        className={step <= minute ? "bar active" : "bar inactive"}
+        className={
+          step <= minute || minute === "ft" ? "bar active" : "bar inactive"
+        }
       />
     );
   });

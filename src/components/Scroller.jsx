@@ -13,6 +13,7 @@ import ProgressBar from "./ProgressBar";
 import Halftime from "./Halftime";
 import Burst from "./Burst";
 import AnnotatedSlide from "./AnnotatedSlide";
+import Fulltime from "./Fulltime";
 
 function Scroller({ touchCoordinates }) {
   // Use state to track how many minutes have passed
@@ -49,10 +50,10 @@ function Scroller({ touchCoordinates }) {
   const backgroundImages = data.map((d, i) => {
     return (
       <div
-        className={`image-container ${d.gameStage === "ht" ? "ht" : ""}`}
+        className={`image-container ${d.minute === "ht" ? "ht" : ""}`}
         style={{
           background:
-            d.gameStage === "ht"
+            d.minute === "ht"
               ? "black"
               : `center/cover no-repeat url('/${d.image}')`,
 
@@ -116,9 +117,9 @@ function Scroller({ touchCoordinates }) {
         {/* The series of divs containing the background images */}
         {!isBurstVisible && backgroundImages}
         <ProgressBar minute={minute} />
+        {/* Show the component that contains the halftime analysis and data */}
         <Halftime
           minute={minute}
-          stepId={stepId}
           stepProgress={stepProgress}
           touchCoordinates={touchCoordinates}
         />
@@ -129,7 +130,7 @@ function Scroller({ touchCoordinates }) {
         >
           {isBurstVisible ? "Watch again" : "Show burst"}
         </button>
-
+        {/* Display the burst images when the button is clicked */}
         {isBurstVisible && (
           <Burst
             burstImages={burstImages}
@@ -137,10 +138,14 @@ function Scroller({ touchCoordinates }) {
             setVisibleImageIndex={setVisibleImageIndex}
           />
         )}
+        {/* If a step has it's annotation property set to true, this component will be visible */}
         <AnnotatedSlide
           isAnnotatedSlideVisible={isAnnotatedSlideVisible}
           stepProgress={stepProgress}
         />
+        {/* Overlay the gradient on top of the background images, but below the progress bar */}
+        <div id="gradient-container" />
+        <Fulltime minute={minute} />
       </div>
       <Scrollama
         offset={0.8}
@@ -150,11 +155,12 @@ function Scroller({ touchCoordinates }) {
         debug
       >
         {data.map((d, stepIndex) => {
+          console.log(d);
           return (
             <Step data={{ ...d, stepIndex }} key={stepIndex}>
               <div
                 className={`step-container ${d.textPosition} ${
-                  d.gameStage === "ht" && "ht"
+                  d.minute === 45 ? "ht" : d.minute === "ft" ? "ft" : ""
                 }`}
               >
                 <p className="step-heading">{d.heading}</p>
