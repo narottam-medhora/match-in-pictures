@@ -21,9 +21,6 @@ function Scroller({ touchCoordinates }) {
   // Use state to track which image should be displayed
   const [stepId, setStepId] = useState(1);
 
-  // Use state to track when the last HT slide was exited
-  const [isHalfTimeOver, setIsHalfTimeOver] = useState(false);
-
   // Use state to set the visibility of the burst button
   const [isBurstButtonVisible, setIsBurstButtonVisible] = useState(false);
 
@@ -52,7 +49,7 @@ function Scroller({ touchCoordinates }) {
   const backgroundImages = data.map((d, i) => {
     return (
       <div
-        className={`image-container`}
+        className={`image-container ${d.gameStage === "ht" ? "ht" : ""}`}
         style={{
           background:
             d.gameStage === "ht"
@@ -83,11 +80,6 @@ function Scroller({ touchCoordinates }) {
     setMinute(obj.data.minute);
     setStepId(obj.data.id);
 
-    // If the last HT step is scrolled back to, set the corresponding state to false
-    if (obj.data.minute === 45 && obj.direction === "up") {
-      setIsHalfTimeOver(false);
-    }
-
     // If the step contains a burst, set the array of images for that specific burst
     if (obj.data.burst) {
       setBurstImages(obj.data.burstImages);
@@ -100,12 +92,6 @@ function Scroller({ touchCoordinates }) {
   }
 
   function onStepExit({ ...obj }) {
-    // If the last HT step is scrolled past, set the corresponding state to true
-    // ! 14 just happens to be the last value of the 'ht' slide for the Grealish data
-    if (obj.data.id === 14) {
-      setIsHalfTimeOver(true);
-    }
-
     // If the step was annotated, reset the value of isAnnotatedSlide visible
     if (obj.data.isAnnotated) {
       setIsAnnotatedSlideVisible(false);
@@ -133,10 +119,9 @@ function Scroller({ touchCoordinates }) {
         <Halftime
           minute={minute}
           stepId={stepId}
+          stepProgress={stepProgress}
           touchCoordinates={touchCoordinates}
-          isHalfTimeOver={isHalfTimeOver}
         />
-
         <button
           className="burst-button"
           onClick={runBurst}

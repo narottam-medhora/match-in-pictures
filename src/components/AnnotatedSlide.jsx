@@ -5,8 +5,6 @@ function AnnotatedSlide({ isAnnotatedSlideVisible, stepProgress }) {
   const chartSettings = {};
   const [ref, dms] = useChartDimensions(chartSettings);
 
-  console.log(stepProgress);
-
   return (
     <div
       ref={ref}

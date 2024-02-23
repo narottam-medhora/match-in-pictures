@@ -111,50 +111,6 @@
     "isAnnotated": false
   },
   {
-    "id": 11,
-    "textPosition": "none",
-    "heading": null,
-    "minute": 45,
-    "gameStage": "ht",
-    "image": null,
-    "text": null,
-    "burst": false,
-    "isAnnotated": false
-  },
-  {
-    "id": 12,
-    "textPosition": "none",
-    "heading": null,
-    "minute": 45,
-    "gameStage": "ht",
-    "image": null,
-    "text": null,
-    "burst": false,
-    "isAnnotated": false
-  },
-  {
-    "id": 13,
-    "textPosition": "none",
-    "heading": null,
-    "minute": 45,
-    "gameStage": "ht",
-    "image": null,
-    "text": null,
-    "burst": false,
-    "isAnnotated": false
-  },
-  {
-    "id": 14,
-    "textPosition": "none",
-    "heading": null,
-    "minute": 45,
-    "gameStage": "ht",
-    "image": null,
-    "text": null,
-    "burst": false,
-    "isAnnotated": false
-  },
-  {
     "id": 15,
     "textPosition": "left",
     "heading": "Most fouled player in the league",

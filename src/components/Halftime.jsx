@@ -4,30 +4,49 @@
 import HalftimeIcon from "../assets/HalftimeIcon";
 import Pitch from "./Pitch";
 
-function Halftime({ stepId, minute, touchCoordinates, isHalfTimeOver }) {
+function Halftime({ minute, touchCoordinates, stepProgress }) {
+  console.log(stepProgress);
   return (
-    <div
-      id="halftime-container"
-      // If the minute value is 45 and the last halftime step container has
-      // not been scrolled past, show the container
-      style={{
-        opacity: minute === 45 && !isHalfTimeOver ? 1 : 0,
-      }}
-    >
-      <div id="halftime-container--text">
-        <div>
-          <HalftimeIcon stepId={stepId} />
-          <h1 id="halftime-header" style={{ opacity: stepId >= 13 ? 1 : 0 }}>
-            Half time{" "}
-            <span
-              style={{ opacity: stepId >= 14 ? 1 : 0 }}
-              id="halftime-subhead"
-            >
-              analysis
-            </span>
+    <>
+      <div
+        id="halftime-container"
+        // If the minute value is 45 and the last halftime step container has
+        // not been scrolled past, show the container
+        style={{
+          opacity: minute === 45 ? 1 : 0,
+        }}
+      >
+        <div id="halftime-container--text">
+          <HalftimeIcon stepProgress={stepProgress} />
+          <h1
+            id="halftime-header"
+            style={{
+              opacity: stepProgress > 0.4 && stepProgress < 0.8 ? 1 : 0,
+            }}
+          >
+            Half time
+            <span id="halftime-subhead">analysis</span>
           </h1>
-          <hr style={{ opacity: stepId >= 14 ? 1 : 0 }} />
-          <p id="halftime-analysis" style={{ opacity: stepId >= 14 ? 1 : 0 }}>
+          <h1
+            id="second-half--header"
+            style={{
+              opacity: stepProgress > 0.8 ? 1 : 0,
+            }}
+          >
+            Second
+            <span id="second-half--subhead">half</span>
+          </h1>
+          <hr
+            style={{
+              opacity: stepProgress > 0.4 && stepProgress < 0.8 ? 1 : 0,
+            }}
+          />
+          <p
+            id="halftime-analysis"
+            style={{
+              opacity: stepProgress > 0.5 && stepProgress < 0.8 ? 1 : 0,
+            }}
+          >
             Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
             eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim
             ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut
@@ -37,9 +56,12 @@ function Halftime({ stepId, minute, touchCoordinates, isHalfTimeOver }) {
             culpa qui officia deserunt mollit anim id est laborum.
           </p>
         </div>
+        <Pitch
+          stepProgress={stepProgress}
+          touchCoordinates={touchCoordinates}
+        />
       </div>
-      <Pitch stepId={stepId} touchCoordinates={touchCoordinates} />
-    </div>
+    </>
   );
 }
 

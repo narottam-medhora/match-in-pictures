@@ -81,21 +81,6 @@
   margin-block-end: 0;
 }
 
-/* For the halftime slides, reduce the gap between steps */
-.step-container.ht {
-  opacity: 0;
-  min-height: 10em;
-  margin-block: 5svh;
-}
-
-.step-container.ht:first-of-type {
-  margin-block-start: 0;
-}
-
-.step-container.ht:last-of-type {
-  margin-block-end: 5svh;
-}
-
 .right {
   left: 65%;
   margin-inline-end: 2em;
@@ -103,6 +88,11 @@
 
 .left {
   left: 10%;
+}
+
+.ht {
+  outline: 1px dashed gold;
+  height: 80svh;
 }
 
 .step-heading {
@@ -160,20 +150,7 @@
 
 #halftime-analysis {
   margin-block-start: 1em;
-}
-
-#second-half--header {
-  color: #ffdf7e;
-  font-family: "Times Modern", serif;
-  font-size: 45px;
   transition: opacity 250ms ease-in;
-}
-
-#second-half--subhead {
-  color: #ff7676;
-  font-size: 8rem;
-  display: block;
-  line-height: 5rem;
 }
 
 hr {
@@ -184,6 +161,22 @@ hr {
   border: none;
   border-block-start: 1px dashed whitesmoke;
   transition: opacity 250ms ease-in;
+}
+
+#second-half--header {
+  color: #ffdf7e;
+  font-family: "Times Modern", serif;
+  font-size: 45px;
+  transition: opacity 250ms ease-in 250ms;
+  margin-inline-start: 1.5em;
+  margin-block-start: -3em;
+}
+
+#second-half--subhead {
+  color: #ff7676;
+  font-size: 8rem;
+  display: block;
+  line-height: 5rem;
 }
 
 /* PITCH STYLES */
