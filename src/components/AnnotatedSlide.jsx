@@ -40,6 +40,18 @@ function AnnotatedSlide({ isAnnotatedSlideVisible, stepProgress }) {
             <stop offset="1" stopColor="#ffdf7e" />
           </linearGradient>
         </defs>
+        <g id="background">
+          <rect
+            x={0}
+            y={0}
+            width={dms.width}
+            height={dms.height}
+            style={{
+              opacity: isAnnotatedSlideVisible && stepProgress > 0.2 ? 1 : 0,
+              fill: "rgba(0, 0, 0, 0.5)",
+            }}
+          />
+        </g>
         <g
           id="Outline"
           stroke="white"

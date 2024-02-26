@@ -1,6 +1,7 @@
 #scroll-container {
   font-size: 1rem;
   font-family: "Times Modern", serif;
+  padding-block-end: 10svh;
 }
 
 #sticky-container {
@@ -36,7 +37,7 @@
   top: 0;
   left: 0;
 
-  transition: opacity 500ms ease-in, transform 1s ease-in 1s;
+  transition: opacity 500ms ease-in, transform 1s ease-in 250ms;
 }
 
 .burst-container {
@@ -71,7 +72,7 @@
   padding-block: 1em;
 
   cursor: pointer;
-  z-index: 10000;
+  z-index: 999999;
 
   transition: opacity 250ms ease-in;
 }
@@ -79,12 +80,13 @@
 /* STEP STYLES */
 
 .step-container {
-  margin: 90svh 0;
+  margin: 80svh 0;
   position: relative;
 
   width: 30svw;
+
   padding: 0.5em;
-  min-height: min-content;
+  height: min-content;
 
   background-color: rgba(0, 0, 0, 0.5);
   border-radius: 10px;
@@ -95,7 +97,12 @@
 }
 
 .step-container:last-of-type {
-  margin-block-end: 0;
+  margin-block-end: 20svh;
+}
+
+.none {
+  opacity: 0;
+  height: 20em;
 }
 
 .right {
@@ -109,11 +116,17 @@
 
 .ht {
   opacity: 0;
-  height: 80svh;
+  margin: 0;
+  height: 100svh;
 }
 
 .ft {
   opacity: 0;
+}
+
+.annotated {
+  padding-block: 40svh;
+  background-color: rgba(0, 0, 0, 0);
 }
 
 .step-heading {
@@ -133,7 +146,7 @@
   height: 100%;
   width: 100%;
 
-  z-index: 99;
+  z-index: 99999;
 
   top: 0;
   left: 0;
@@ -203,8 +216,8 @@ hr {
 /* PITCH STYLES */
 
 #pitch-container {
-  width: 100%;
-  height: 600px;
+  width: 40em;
+  height: 40em;
 }
 
 .line {
@@ -222,7 +235,7 @@ hr {
   top: 0;
   left: 0;
   z-index: 999;
-  transition: opacity 1s ease-in 1s;
+  transition: opacity 1s ease-in 250ms;
 }
 
 #annotated-slide {
@@ -251,7 +264,6 @@ hr {
 
 #fulltime-gradient {
   background-color: black;
-  /* background-blend-mode: multiply; */
   opacity: 0.5;
 
   width: 100svw;
@@ -275,4 +287,50 @@ hr {
   display: block;
   line-height: 2rem;
   margin-inline-start: -0.6em;
+}
+
+/* ANALYSIS CONTAINER */
+#analysis-container {
+  width: 100svw;
+  height: 100svh;
+
+  position: absolute;
+  top: 0;
+  left: 0;
+
+  z-index: 99999;
+
+  transition: opacity 250ms ease-in;
+
+  /* Split the container into two */
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  justify-items: center;
+  align-items: center;
+}
+
+#analysis-container--text {
+  width: 70%;
+  margin-block-start: 1em;
+}
+
+#analysis-header {
+  color: #ffdf7e;
+  font-family: "Times Modern", serif;
+  font-size: 80px;
+  line-height: 50px;
+  transition: opacity 250ms ease-in;
+  margin-inline-start: 1.5em;
+}
+
+#analysis-subhead {
+  display: block;
+  font-size: 45px;
+  color: #ff7676;
+  transition: opacity 250ms ease-in;
+}
+
+#analysis-analysis {
+  margin-block-start: 1em;
+  transition: opacity 250ms ease-in;
 }

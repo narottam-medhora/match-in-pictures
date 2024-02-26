@@ -3,7 +3,7 @@
 function HalftimeIcon({ stepProgress }) {
   return (
     <svg id="halftime-icon" width={150} height={100}>
-      <g id="rect-1" fill="#164971" opacity={stepProgress >= 0.1 ? 1 : 0}>
+      <g id="rect-1" fill="#164971" opacity={stepProgress >= 0.05 ? 1 : 0}>
         <polygon
           className="st0"
           points="86.61,36.29 14.16,36.29 24.67,22.78 96.56,22.78"

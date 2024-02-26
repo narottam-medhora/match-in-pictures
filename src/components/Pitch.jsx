@@ -12,7 +12,7 @@ function Pitch({ stepProgress, touchCoordinates }) {
 
   const xScale = scaleLinear()
     .domain([0, pitchWidth])
-    .range([0, dms.boundedWidth / 2]);
+    .range([0, dms.boundedWidth / 1.5]);
 
   const yScale = scaleLinear()
     .domain([0, pitchLength])
@@ -26,7 +26,7 @@ function Pitch({ stepProgress, touchCoordinates }) {
         r={5}
         fill="#FF7676"
         key={i}
-        style={{ opacity: stepProgress > 0.5 && stepProgress < 0.75 ? 1 : 0 }}
+        style={{ opacity: stepProgress > 0.5 ? 1 : 0 }}
       />
     );
   });
@@ -35,7 +35,7 @@ function Pitch({ stepProgress, touchCoordinates }) {
     <div
       id="pitch-container"
       ref={ref}
-      style={{ opacity: stepProgress > 0.5 && stepProgress < 0.75 ? 1 : 0 }}
+      style={{ opacity: stepProgress > 0.5 ? 1 : 0 }}
     >
       <svg id="pitch" width={dms.width} height={dms.height}>
         <g transform={`translate(${dms.marginLeft}, ${dms.marginTop})`}>
@@ -81,24 +81,32 @@ function Pitch({ stepProgress, touchCoordinates }) {
                 cy={yScale(pitchLength / 2)}
                 r={xScale(10)}
                 fill="none"
+                stroke="white"
+                strokeWidth={2}
               />
               <circle
                 cx={xScale(pitchWidth / 2)}
                 cy={yScale(pitchLength / 2)}
                 r={xScale(0.5)}
                 fill="white"
+                stroke="white"
+                strokeWidth={2}
               />
               <circle
                 cx={xScale(pitchWidth / 2)}
                 cy={yScale(120 - 11.5)}
                 r={xScale(0.2)}
                 fill="white"
+                stroke="white"
+                strokeWidth={2}
               />
               <circle
                 cx={xScale(pitchWidth / 2)}
                 cy={yScale(11.5)}
                 r={xScale(0.2)}
                 fill="white"
+                stroke="white"
+                strokeWidth={2}
               />
             </g>
             <g id="pitch-markers--box_1">

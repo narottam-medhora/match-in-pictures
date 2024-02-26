@@ -14,8 +14,9 @@ import Halftime from "./Halftime";
 import Burst from "./Burst";
 import AnnotatedSlide from "./AnnotatedSlide";
 import Fulltime from "./Fulltime";
+import MatchAnalysis from "./MatchAnalysis";
 
-function Scroller({ touchCoordinates }) {
+function Scroller({ halftimeTouchCoordinates, fulltimeTouchCoordinates }) {
   // Use state to track how many minutes have passed
   const [minute, setMinute] = useState(0);
 
@@ -101,7 +102,7 @@ function Scroller({ touchCoordinates }) {
 
   function onStepProgress({ ...obj }) {
     // If the step contains a burst, set the visibility of the burst button to true
-    if (obj.data.burst && obj.progress > 0.5) {
+    if (obj.data.burst && obj.progress > 0.85) {
       setIsBurstButtonVisible(true);
     } else {
       setIsBurstButtonVisible(false);
@@ -109,6 +110,8 @@ function Scroller({ touchCoordinates }) {
     }
 
     setStepProgress(obj.progress);
+
+    console.log(obj);
   }
 
   return (
@@ -121,7 +124,7 @@ function Scroller({ touchCoordinates }) {
         <Halftime
           minute={minute}
           stepProgress={stepProgress}
-          touchCoordinates={touchCoordinates}
+          touchCoordinates={halftimeTouchCoordinates}
         />
         <button
           className="burst-button"
@@ -146,6 +149,11 @@ function Scroller({ touchCoordinates }) {
         {/* Overlay the gradient on top of the background images, but below the progress bar */}
         <div id="gradient-container" />
         <Fulltime minute={minute} />
+        <MatchAnalysis
+          minute={minute}
+          stepProgress={stepProgress}
+          touchCoordinates={fulltimeTouchCoordinates}
+        />
       </div>
       <Scrollama
         offset={0.8}
@@ -155,12 +163,19 @@ function Scroller({ touchCoordinates }) {
         debug
       >
         {data.map((d, stepIndex) => {
-          console.log(d);
           return (
             <Step data={{ ...d, stepIndex }} key={stepIndex}>
               <div
                 className={`step-container ${d.textPosition} ${
-                  d.minute === 45 ? "ht" : d.minute === "ft" ? "ft" : ""
+                  d.minute === 45
+                    ? "ht"
+                    : d.minute === "ft"
+                    ? "ft"
+                    : d.minute === "analysis"
+                    ? "analysis"
+                    : d.isAnnotated
+                    ? "annotated"
+                    : ""
                 }`}
               >
                 <p className="step-heading">{d.heading}</p>

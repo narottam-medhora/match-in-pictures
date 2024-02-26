@@ -185,7 +185,7 @@
     "textPosition": "none",
     "heading": null,
     "minute": 90,
-    "image": "slide_17.png",
+    "image": "slide_17.jpg",
     "text": null,
     "burst": false,
     "isAnnotated": false
@@ -195,7 +195,7 @@
     "textPosition": "none",
     "heading": null,
     "minute": 90,
-    "image": "slide_18.png",
+    "image": "slide_18.jpg",
     "text": null,
     "burst": false,
     "isAnnotated": false
@@ -205,7 +205,7 @@
     "textPosition": "none",
     "heading": null,
     "minute": 90,
-    "image": "slide_19.png",
+    "image": "slide_19.jpg",
     "text": null,
     "burst": false,
     "isAnnotated": false
@@ -215,7 +215,7 @@
     "textPosition": "none",
     "heading": null,
     "minute": 90,
-    "image": "slide_20.png",
+    "image": "slide_20.jpg",
     "text": null,
     "burst": false,
     "isAnnotated": false
@@ -224,18 +224,8 @@
     "id": 26,
     "textPosition": "none",
     "heading": null,
-    "minute": 90,
-    "image": "slide_21.png",
-    "text": null,
-    "burst": false,
-    "isAnnotated": false
-  },
-  {
-    "id": 27,
-    "textPosition": "none",
-    "heading": null,
-    "minute": 90,
-    "image": "slide_22.png",
+    "minute": "analysis",
+    "image": null,
     "text": null,
     "burst": false,
     "isAnnotated": false

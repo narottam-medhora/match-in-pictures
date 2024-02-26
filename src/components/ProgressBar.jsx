@@ -11,7 +11,13 @@ function ProgressBar({ minute }) {
   const progressBars = arr.map((step) => {
     return step === "HT" ? (
       <div className="bar" id="halftime" key="bar-halftime">
-        <p style={{ color: minute >= 45 ? "#ff7676" : "white" }}>HT</p>
+        <p
+          style={{
+            color: minute >= 45 || minute === "ft" ? "#ff7676" : "white",
+          }}
+        >
+          HT
+        </p>
       </div>
     ) : (
       <div

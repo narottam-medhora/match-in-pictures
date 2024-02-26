@@ -23,8 +23,10 @@ body {
 
   background-color: black;
   color: white;
+  /* Hide horizontal scrollbar */
   overflow-x: hidden;
 }
+
 /*
     5. Improve media defaults
   */
