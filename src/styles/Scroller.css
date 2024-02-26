@@ -74,6 +74,8 @@
   cursor: pointer;
   z-index: 999999;
 
+  font-family: "RobotoRegular", sans-serif;
+
   transition: opacity 250ms ease-in;
 }
 
