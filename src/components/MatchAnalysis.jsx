@@ -1,6 +1,6 @@
 import React from "react";
 import Pitch from "./Pitch";
-import HalftimeIcon from "../assets/HalftimeIcon";
+import HalftimeIcon from "./HalftimeIcon";
 
 function MatchAnalysis({ minute, stepProgress, touchCoordinates }) {
   return (

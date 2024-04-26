@@ -1,6 +1,6 @@
 import "../styles/Hero.css";
 
-import ScrollIcon from "../assets/ScrollIcon";
+import ScrollIcon from "./ScrollIcon";
 
 function Hero() {
   return (

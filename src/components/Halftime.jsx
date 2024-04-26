@@ -1,7 +1,7 @@
 /* eslint-disable react/prop-types */
 
 // Import components
-import HalftimeIcon from "../assets/HalftimeIcon";
+import HalftimeIcon from "./HalftimeIcon";
 import Pitch from "./Pitch";
 
 function Halftime({ minute, touchCoordinates, stepProgress }) {
